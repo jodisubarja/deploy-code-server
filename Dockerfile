@@ -26,8 +26,8 @@ RUN sudo chown -R coder:coder /home/coder/.local
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_14.x | sudo bash -
 RUN sudo apt-get install -y nodejs
 
-RUN apk add yarn
-RUN yarn global add @vue/cli @vue/cli-service-global
+RUN sudo apt-get install -y yarn
+RUN sudo yarn global add @vue/cli @vue/cli-service-global
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
