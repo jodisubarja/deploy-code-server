@@ -13,9 +13,6 @@ ENV SHELL=/bin/bash
 RUN sudo apt-get update && sudo apt-get install unzip -y
 RUN curl https://rclone.org/install.sh | sudo bash
 
-RUN sudo curl -fsSL https://deb.nodesource.com/setup_14.x | sudo bash -
-RUN sudo apt-get install -y nodejs
-
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
 
@@ -25,6 +22,12 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # You can add custom software and dependencies for your environment below
 # -----------
+
+RUN sudo curl -fsSL https://deb.nodesource.com/setup_14.x | sudo bash -
+RUN sudo apt-get install -y nodejs
+
+RUN apk add yarn
+RUN yarn global add @vue/cli @vue/cli-service-global
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
