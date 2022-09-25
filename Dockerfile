@@ -31,6 +31,9 @@ RUN sudo npm install -g @vue/cli
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 # RUN code-server --install-extension esbenp.prettier-vscode
+RUN code-server --install-extention mubaidr.vuejs-extension-pack
+RUN code-server --install-extention kiteco.kite
+
 
 # Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
