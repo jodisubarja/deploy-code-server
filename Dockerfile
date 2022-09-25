@@ -46,6 +46,7 @@ RUN code-server --install-extension kiteco.kite
 # -----------
 
 # Port
+
 ENV PORT=8080
 
 # Use our custom entrypoint script first
