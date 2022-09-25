@@ -27,8 +27,7 @@ RUN sudo curl -fsSL https://deb.nodesource.com/setup_14.x | sudo bash -
 RUN sudo apt-get install -y nodejs
 
 RUN sudo apt-get install -y yarn
-RUN sudo yarn add @vue/cli @vue/cli-service-global
-
+RUN sudo npm install -g @vue/cli
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 # RUN code-server --install-extension esbenp.prettier-vscode
